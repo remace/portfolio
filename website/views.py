@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template, url_for, redirect, request
 from flask import render_template
 
 
@@ -17,3 +17,14 @@ def cv():
 @app.route("/portfolio")
 def portfolio():
     return render_template("portfolio.html")
+
+@app.route("/mail", methods=['GET', 'POST'])
+def mail():
+    if request.method=="GET":
+        # coucou
+        return render_template('mailForm.html')
+    elif request.method=="POST":    
+        # send the mail to me and a copy to the sender
+        return redirect(url_for('index'), code=301)
+    else:
+        return redirect(url_for('index'), code=403)

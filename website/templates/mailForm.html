@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block head %}
+    {{ super() }}
+{% endblock head %}
+
+{% block title%} E-mail {% endblock title%}
+
+{% block content %}
+    <form class="flex flex-col justify-start px-4 py-8 space-y-4" action={{url_for('mail')}} method="POST">
+        <h2 class="mx-auto text-2xl">Formulaire de contact</h2>
+        <div class="flex items-center">
+            <label for="email" hidden>Adresse mail:</label>
+            <input class="mx-auto
+                bg-gray-200
+                w-9/12
+                border-b-2
+                border-solid
+                border-indigo-500
+                focus:outline-none
+                focus:border-2
+                " 
+            type="email" 
+            name="email" 
+            id="email" 
+            placeholder="email">
+        </div>
+        <div class="flex items-center">
+            <label for="message" hidden>Message</label>
+            <textarea class="mx-auto
+                bg-gray-200
+                w-9/12  
+                resize-none
+                border-b-2
+                border-solid
+                border-indigo-500
+                focus:outline-none
+                focus:border-2
+                px-0
+                " 
+                name="message" 
+                id="message" 
+                cols="30" 
+                rows="10" 
+                placeholder="votre message"></textarea>
+        </div>
+        <button class="mx-auto mt-12 
+                        px-8
+                        py-4 
+                        rounded-full 
+                        text-xl 
+                        text-white 
+                        bg-indigo-500 
+                        hover:text-indigo 
+                        hover:bg-white 
+                        hover:ring-4 
+                        hover:ring-indigo-500 
+                        hover:text-indigo-500" 
+                type="submit">
+            Envoyer
+        </button>
+    </form>
+</div>
+{% endblock content %}
