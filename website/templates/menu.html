@@ -1,0 +1,18 @@
+<header class="w-screen 
+                flex
+                justify-between
+                items-center
+                shadow-md
+                py-3">
+    <div class="text-3xl">
+        Rémi TAUVEL
+    </div>
+    <nav 
+        role="tablist" 
+        class="space-x-8 mr-8 items-baseline text-xl"
+        >
+        <a role="tab" class="" href={{ url_for('index') }}>Accueil</a>
+        <a role="tab" class="" href={{ url_for('cv') }}>Curriculum Vitae</a>
+        <a role="tab" class="" href={{ url_for("portfolio")}}>Portfolio</a>
+    </nav>
+</header>
