@@ -7,35 +7,65 @@
 {% block title%} index {% endblock title%}
 
 {% block content%}
-<div id="Accueil"
+<div id="homepage"
     class="flex-cols
         h-screen
         pt-16
         pb-8">
-    <div class=" h-min w-full">
-        <h2 class="text-2xl">Qui suis-je?</h2>
-        <!-- TODO photo-->
-        <p>futur développeur en reconversion professionnelle, curieux mais toujours de bonne humeur</p>
-        <h3 class="text-xl">Mes technos:</h3>
-        <div id="technos"
-        class="flex flex-rows items-center justify-around
-        "
-        >
-        <img src={{ url_for('static',filename='python.png' )}} alt="logo python" width="100px">
-        <img src={{ url_for('static',filename='flask.png' )}} alt="logo flask" width="100px">
-        <img src={{ url_for('static',filename='django2.png' )}} alt="logo django" width="100px">
-        <img src={{ url_for('static',filename='html5.png' )}} alt="logo HTML" width="100px">
-        <img src={{ url_for('static',filename='css3.png' )}} alt="logo CSS" width="100px">
-        <img src={{ url_for('static',filename='javascript.png' )}} alt="logo Javascript" width="100px">
-        <img src={{ url_for('static',filename='vue.png' )}} alt="logo VueJS" width="100px">
+    <div id="presentation" class=" h-min w-full">
+        <div id="hero">
+            <h2 class="text-2xl">Qui suis-je?</h2>
+            <!-- TODO photo-->
+            <p>comme vu dans le titre de la page, je m'appelle Rémi, j'ai 32 ans, 
+                je suis développeur junior, curieux et réfléchi, mais toujours dans la bonne humeur!</p>
+            <div id="photo-container"
+                class="
+                w-[200px] h-[200px] bg-indigo-500 flex flex-cols items-end justify-center">
+                <p class="text-white">photo à venir</p>
+            </div>
+        </div>
+        <div id="hobbies">
+            <h3 class="text-xl">Mes hobbies</h3>
+            <div>
+                tir à l'arc
+            </div> 
+            <div>
+                moto
+            </div>
+            <div>
+                technologie
+            </div>
+            <div>
+                musique
+            </div>
+        </div>
+        <div id="technos-bloc">
+            <h3 class="text-xl">Mes technos:</h3>
+            <div id="technos"
+            class="flex 
+            flex-rows
+            items-center
+            justify-around
+            ">
+            <img src={{ url_for('static',filename='img/python.png' )}} alt="logo python" width="100px">
+            <img src={{ url_for('static',filename='img/flask.png' )}} alt="logo flask" width="100px">
+            <img src={{ url_for('static',filename='img/django2.png' )}} alt="logo django" width="100px">
+            {#
+                <img src={{ url_for('static',filename='img/html5.png' )}} alt="logo HTML" width="100px">
+                <img src={{ url_for('static',filename='img/css3.png' )}} alt="logo CSS" width="100px">
+                <img src={{ url_for('static',filename='img/javascript.png' )}} alt="logo Javascript" width="100px">
+            #}
+            <img src={{ url_for('static',filename='img/vue.png' )}} alt="logo VueJS" width="100px">
+            </div>
         </div>
     </div>
+    
     <div id="contact"
-        class="h-min">
-        <h2 class="text-2xl">Me contacter</h2>
+    class="h-min">
+    <h2 class="text-2xl">Me contacter</h2>
+    <div class='flex-cols space-y-2'>
+        <h3 class="text-xl">Mes Coordonnées</h3>
         <div class='flex-cols space-y-2'>
-            <h3 class="text-xl">Mes Coordonnées</h3>
-            <div class='flex-cols space-y-2'>
                 <p>    
                     adresse: 9 rue de Laubre 07400 Meysse<br/>
                 </p>

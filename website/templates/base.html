@@ -11,7 +11,22 @@
 <body class="relative w-screen h-screen">
 {% endblock head %}
 {% include "menu.html" %}
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        {% for category, message in messages %}
+            <div class="absolute w-full py-8 px-8 flex items-start {{"bg-red-500" if category == "error" else "bg-green-500"}} mt-16">
+                <p>{{ message }}</p>
+                <div class="ml-auto px-2 cursor-pointer" name="escape_message">
+                    X
+                </div>
+            </div>
+            {% endfor %}
+    {% endif %}
+{% endwith %}
+
 {% block content %}{% endblock content %}
 {% include "footer.html" %}
+<script src={{url_for('static', filename='js/escape_message.js')}}></script>
 </body>
 </html>
