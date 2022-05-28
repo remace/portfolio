@@ -7,4 +7,187 @@
 {% block title%} portfolio {% endblock title%}
 
 {% block content%}
+<div class="flex flex-col justify-center ">
+    <div id="project " 
+        class="
+        fr
+        grid
+        grid-cols-3
+        gap-4">
+        <!-- GrandPy Bot -->
+        <div class="screenshot">
+            <img class="h-[200px] mx-auto" src={{url_for('static', filename='img/portfolio/grandpy_bot.png')}} alt="">
+        </div>
+        <div class="description">
+            <h3>GrandPy Bot</h3>    
+            <p> le grand-père qui sait tout!<br />
+                le principe de ce projet d'études est de construire une application qui va se charger de consulter des API externes suivantes pour en présenter le contenu géographique et culturel: 
+                <ul>
+                    <li>google maps</li>
+                    <li>wikipedia</li>
+                </ul>
+            </p>
+            <p>technologies utilisées: Flask, HTML, CSS</p>
+        </div>
+        <div class="links">
+            <div>
+                <a class="underline" href="https://grandpy-bot-remace.herokuapp.com">lien en production</a>
+            </div>
+            <div>
+                <a class="underline" href="https://github.com/remace/OC-P7-GrandPy_Bot">lien github</a>
+            </div>
+            </a>
+        </div>
+        <!-- Purbeurre -->
+        <div class="screenshot">
+            <img class="h-[200px] mx-auto" src={{url_for('static', filename='img/portfolio/purbeurre.png')}} alt="">
+        </div>
+        <div class="description">
+            <h3>Purbeurre</h3>    
+            <p> un clone simplifié de Yuka<br />
+                le principe de ce projet d'études est de lister des produits du commerce, de façon à pouvoir leur trouver des alternatives et les sauvegarder dans la base de données de l'application
+            </p>
+            <p>technologies utilisées: Django, postgresql, bootstrap, HTML, CSS</p>
+        </div>
+        <div class="links">
+            <div>
+                <a class="underline" href="http://164.92.224.144/">lien en production</a>
+            </div>
+            <div>
+                <a class="underline" href="https://github.com/remace/OC-P8-Purbeurre">lien github</a>
+            </div>
+        </div>
+        <!-- Purbeurre desktop app with kivy -->
+        <div class="screenshot">
+            <p>je n'ai hélas pas d'image à proposer pour l'instant</p>
+        </div>
+        <div class="description">
+            <h3>Purbeurre - kivy</h3>    
+            <p>pareil mais en appli native (desktop par défaut, mais kivy développe des outils pour build sur mobile)<br />
+                comme pour Purbeurre plus haut
+            </p>
+            <p>technologies utilisées: python, kivy, mysql</p>
+        </div>
+        <div class="links">
+            <div>
+                <a class="underline" href="https://github.com/remace/OC-P5-PurBeurre">lien github</a>
+            </div>
+        </div>
+        <!-- GrandPy Bot -->
+        <div class="screenshot">
+            <img class="h-[200px] mx-auto" src={{url_for('static', filename='img/portfolio/MacGyver.png')}} alt="">
+        </div>
+        <div class="description">
+            <h3>Mac Gyver</h3>    
+            <p>aidez-le à s'échapper!<br />
+                le principe de ce projet d'études est un jeu 2D où il faut ramasser des objets pour attaquer un garde et pouvoir s'enfuir du labyrinthe.
+            </p>
+            <p>technologies utilisées: Python3, Pygame</p>
+        </div>
+        <div class="links">
+            <div>
+                <a class="underline" href="https://github.com/remace/OC-P3-MacGyver">lien github</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="projects" 
+        class="
+        grid
+        grid-cols-3
+        gap-4
+        en
+        hidden">
+        <!-- GrandPy Bot -->
+        <div class="screenshot">
+            <img class="h-[200px] mx-auto" src={{url_for('static', filename='img/portfolio/grandpy_bot.png')}} alt="">
+        </div>
+        <div class="description">
+            <h3>GrandPy Bot</h3>    
+            <p> GrandPy knows everything about everywhere<br />
+                this is a studies app about exploring external API to collect geolocalisation and cultural data: 
+                <ul>
+                    <li>google maps</li>
+                    <li>wikipedia</li>
+                </ul>
+            </p>
+            <p>framework/languages used: Flask, HTML, CSS</p>
+        </div>
+        <div class="links">
+            <div>
+                <a class="underline" href="https://grandpy-bot-remace.herokuapp.com">lien en production</a>
+            </div>
+            <div>
+                <a class="underline" href="https://github.com/remace/OC-P7-GrandPy_Bot">lien github</a>
+            </div>
+            </a>
+        </div>
+        <!-- Purbeurre -->
+        <div class="screenshot">
+            <img class="h-[200px] mx-auto" src={{url_for('static', filename='img/portfolio/purbeurre.png')}} alt="">
+        </div>
+        <div class="description">
+            <h3>Purbeurre</h3>    
+            <p> "Yuka"-like app to explore openfoodfacts API<br />
+                listing sold products and searching for healthier substitutes to your food, and then saving them as favourites
+            </p>
+            <p>technologies utilisées: Django, postgresql, bootstrap, HTML, CSS</p>
+        </div>
+        <div class="links">
+            <div>
+                <a class="underline" href="http://164.92.224.144/">production link</p>
+            </div>
+            <div>
+                <a class="underline" href="https://github.com/remace/OC-P8-Purbeurre">github link</a>
+            </div>
+        </div>
+        <!-- Purbeurre desktop app with kivy -->
+        <div class="screenshot">
+            <p>unfortunately no picture for instance</p>
+        </div>
+        <div class="description">
+            <h3>Purbeurre - kivy</h3>    
+            <p>same than Purbeurre (desktop app by default, but kivy has mobile building options I didn't explore)<br />
+            </p>
+            <p>framework/languages used: python, kivy, mysql</p>
+        </div>
+        <div class="links">
+            <div>
+                <a class="underline" href="https://github.com/remace/OC-P5-PurBeurre">github link</a>
+            </div>
+        </div>
+        <!-- Mac Gyver -->
+        <div class="screenshot">
+            <img class="h-[200px] mx-auto" src={{url_for('static', filename='img/portfolio/MacGyver.png')}} alt="">
+        </div>
+        <div class="description">
+            <h3>Mac Gyver</h3>    
+            <p>aidez-le à s'échapper!<br />
+                le principe de ce projet d'études est un jeu 2D où il faut ramasser des objets pour attaquer un garde et pouvoir s'enfuir du labyrinthe.
+            </p>
+            <p>framework/languages used: Python3, Pygame</p>
+        </div>
+        <div class="links">
+            <div>
+                <a class="underline" href="https://github.com/remace/OC-P3-MacGyver">github link</a>
+            </div>
+        </div>
+    </div>
+<button id="languageSwitcher" class="mx-auto mt-12 
+                        px-8
+                        py-4 
+                        rounded-full 
+                        text-xl 
+                        text-white 
+                        bg-indigo-500
+                        mt-auto
+                        mb-4 
+                        hover:text-indigo 
+                        hover:bg-white 
+                        hover:ring-4 
+                        hover:ring-indigo-500 
+                        hover:text-indigo-500" 
+                >Switch to English</button>
+<script src={{ url_for('static', filename='js/language_switcher.js')}} defer></script>
+</div>
 {% endblock content%}
