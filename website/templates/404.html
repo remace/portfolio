@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block head %}
+    {{ super() }}
+{% endblock head %}
+
+{% block title%} 404 {% endblock title%}
+
+{% block content%}
+<div class="h-full flex flex-col items-center justify-center">
+    <h2 class="text-2xl"> erreur 404</h2>
+    <div>La page ou le fichier demandé n'existe pas. peut-être un jour?</div>
+    <div class="text-red-500">{{ctx.get('error')}}</div>
+</div>    
+{% endblock content %}

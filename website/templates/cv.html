@@ -157,22 +157,58 @@
             </div>
         </div>
     </div>
-
-    <button id="languageSwitcher" class="mx-auto mt-12 
-                            px-8
-                            py-4 
-                            rounded-full 
-                            text-xl 
-                            text-white 
-                            bg-indigo-500
-                            mt-auto
-                            mb-4 
-                            hover:text-indigo 
-                            hover:bg-white 
-                            hover:ring-4 
-                            hover:ring-indigo-500 
-                            hover:text-indigo-500" 
-                    >Switch to English</button>
-    <script src={{ url_for('static', filename='js/language_switcher.js')}} defer></script>
+    <div id="button_container" class="flex
+    flex-row justify-around justify-items-center items-center w-3/4">
+        <button id="languageSwitcher" class="mx-auto mt-12 
+                                px-8
+                                py-4 
+                                rounded-full 
+                                text-xl 
+                                text-white 
+                                bg-indigo-500
+                                mt-auto
+                                mb-4 
+                                hover:text-indigo 
+                                hover:bg-white 
+                                hover:ring-4 
+                                hover:ring-indigo-500 
+                                hover:text-indigo-500" 
+            >Switch to English</button>
+        <button id="CV_fr" class="mx-auto mt-12 
+            px-8
+            py-4 
+            rounded-full 
+            text-xl 
+            text-white 
+            bg-indigo-500
+            mt-auto
+            mb-4 
+            hover:text-indigo 
+            hover:bg-white 
+            hover:ring-4 
+            hover:ring-indigo-500 
+            hover:text-indigo-500
+            fr" 
+            >Télécharger CV en PDF</button>
+        <button id="CV_en" class="mx-auto mt-12 
+            px-8
+            py-4 
+            rounded-full 
+            text-xl 
+            text-white 
+            bg-indigo-500
+            mt-auto
+            mb-4 
+            hover:text-indigo 
+            hover:bg-white 
+            hover:ring-4 
+            hover:ring-indigo-500 
+            hover:text-indigo-500
+            en
+            hidden" 
+            >download CV PDF</button>
+    </div>
 </div>             
+<script src={{ url_for('static', filename='js/download_cv.js')}} defer></script>
+<script src={{ url_for('static', filename='js/language_switcher.js')}} defer></script>
 {% endblock content%}
