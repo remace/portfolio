@@ -9,33 +9,36 @@
 {% block content%}
 <div id="cv-page" 
     class="
+        grow
         flex
-        flex-col 
+        flex-col
         items-center
-        h-full">
+        w-full">
     <div id="items-container" 
         class="flex 
             flex-rows 
             justify-center
-            h-full">
+            grow
+            w-full
+            px-12
+            ">
         <div id="pro"
             class="relative w-1/2
-            h-full
-            px-8
-            border-r-2
+            grow
+            pr-12
             ">
             <div id="pro_fr"
                 class="fr
-                        h-full
                         flex
                         flex-col
                         justify-around
+                        h-full
+                        items-stretch
                 ">
                 <div id="jobs"
                     class= "flex 
                         flex-col
                         justify-around
-                        
                         ">
                     <h2 class="text-2xl my-4">Expérience Professionnelle</h2>
                     <p class="my-2"><date class="underline italic">depuis sept.2016:</date> AED au sein du college Europa 26200 Montélimar</p>
@@ -47,7 +50,6 @@
                 <div id="industrial-projects"
                     class= "flex flex-col
                     justify-around
-                    
                     ">
                     <h2 class="text-2xl my-4">Stages et projets scolaires industriels</h2>
                     <p class="my-2"><date class="underline italic">mars-juin 2013 :</date> intégration d'un prototype de serveur de stockage sécurisé</p>
@@ -61,14 +63,14 @@
                         flex
                         flex-col
                         justify-around
+                        items-stretch
                         hidden
+
                 ">
                 <div id="jobs"
                     class= "flex 
                         flex-col
-                        justify-around
-                        
-                        ">
+                        justify-around">
                     <h2 class="text-2xl my-4">Former Jobs</h2>
                     <p class="my-2"><date class="underline italic">since sept. 2016:</date> pupil monitor for medium school Europa 26200 Montélimar</p>
                     <p class="my-2"><date class="underline italic">nov.2015 -jun. 2015:</date> social network helper at l'Intergroupe Marcel Pagnol</p>
@@ -79,7 +81,6 @@
                 <div id="industrial-projects"
                     class= "flex flex-col
                     justify-around
-                    
                     ">
                     <h2 class="text-2xl my-4">internships and in-school industrial projects</h2>
                     <p class="my-2"><date class="underline italic">mar. tu jun.  2013:</date> integration of a crypted NAS (Phosphorus)</p>
@@ -92,8 +93,8 @@
 
         <div id="scolaire"
             class="relative w-1/2
-                h-full
-                px-8">
+                pl-12
+                grow">
             <div id="scolaire_fr" 
                 class="fr
                 h-full
@@ -116,7 +117,6 @@
                     class="flex 
                     flex-col
                     justify-around
-                    
                     ">
                     <h2 class="text-2xl my-4">Prix et Concours</h2>
                     <p class="my-2"><date class="underline italic">2019 :</date> admission au CAPES interne en mathématiques, avant radiation pour un motif administratif.</p>
@@ -137,7 +137,7 @@
                         flex-col
                         justify-around
                         ">
-                    <h2 class="text-2xl my-4">Parcours Scolaire</h2>
+                    <h2 class="text-2xl my-4">Scolarship</h2>
                     <p class="my-2"><date class="underline italic">depuis novembre 2019 :</date> Parcours développeur informatique option python/django (Openclassrooms)</p>
                     <p class="my-2"><date class="underline italic">2010 - 2013 :</date> hardware and software engineer (cycle ISMIN l'Ecole des Mines de St-Etienne), master's degree not acquired</p>
                     <p class="my-2"><date class="underline italic">2008 - 2010 :</date> prep school for engineer studies (lycée Jean-Baptiste Dumas à Alès)</p>
@@ -149,7 +149,7 @@
                     justify-around
                     
                     ">
-                    <h2 class="text-2xl my-4">Prix et Concours</h2>
+                    <h2 class="text-2xl my-4">Contests and Prizes</h2>
                     <p class="my-2"><date class="underline italic">2019 :</date> math teacher certificate. canceled for administrative reasons</p>
                     <p class="my-2"><date class="underline italic">2012 and 2013</date> TOEIC test 750/990 and 785/990</p>    
                     <p class="my-2"><date class="underline italic">2008 :</date> 6th place at Concours Général des Lycées (national contest on physic sciences)</p>
@@ -157,8 +157,14 @@
             </div>
         </div>
     </div>
-    <div id="button_container" class="flex
-    flex-row justify-around justify-items-center items-center w-3/4">
+    <div id="button_container" 
+        class="flex
+            flex-row
+            justify-around 
+            justify-items-center
+            items-center
+            w-3/4
+            my-auto">
         <button id="languageSwitcher" class="mx-auto mt-12 
                                 px-8
                                 py-4 
