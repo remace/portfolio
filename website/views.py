@@ -5,7 +5,7 @@ from flask import render_template
 
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = environ.get('SECRET_KEY')
+app.config.from_object(os.environ.get('APP_SETTINGS'))
 
 
 @app.errorhandler(404)
