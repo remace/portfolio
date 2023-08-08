@@ -1,4 +1,3 @@
-{% block head %}
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -8,27 +7,35 @@
     <title>Rémi TAUVEL - {% block title %}{% endblock title %}</title>    
     <script src="https://cdn.tailwindcss.com"></script>
 </head>    
-<body class="relative w-screen min-h-screen">
-{% endblock head %}
-{% include "menu.html" %}
-
-{% with messages = get_flashed_messages(with_categories=true) %}
-    {% if messages %}
-        {% for category, message in messages %}
-            <div class="absolute z-10 w-full py-8 px-8 flex items-start {{"bg-red-500" if category == "error" else "bg-green-500"}} mt-16">
-                <p>{{ message }}</p>
-                <div class="ml-auto px-2 cursor-pointer" name="escape_message">
-                    X
+<body class="flex flex-col min-h-screen">
+    <header class=" w-full top-0 p-4">
+        {% include "menu.html" %}
+    </header>
+    
+    <div class="w-full">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                <div class="absolute z-10 w-full py-8 px-8 flex items-start {{"bg-red-500" if category == "error" else "bg-green-500"}} mt-16">
+                    <p>{{ message }}</p>
+                    <div class="ml-auto px-2 cursor-pointer" name="escape_message">
+                        X
+                    </div>
                 </div>
-            </div>
-            {% endfor %}
-    {% endif %}
-{% endwith %}
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </div>
 
-<div class="absolute top-0 bottom-0 left-0 right-0 mt-16 mb-8">
-{% block content %}{% endblock content %}
-</div>
-{% include "footer.html" %}
-<script src={{url_for('static', filename='js/escape_message.js')}}></script>
+    <main class="w-full mt-16 mb-8 flex-1">
+    {% block content %}
+    {% endblock content %}
+    </main>
+    
+    <footer class="w-full justify-center shadow-md py-2">
+        {% include "footer.html" %}
+    </footer>
+    
+    <script src={{url_for('static', filename='js/escape_message.js')}}></script>
 </body>
 </html>

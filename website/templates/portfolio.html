@@ -1,13 +1,9 @@
 {% extends "base.html" %}
 
-{% block head %}
-    {{ super() }}
-{% endblock head %}
-
 {% block title%} portfolio {% endblock title%}
 
 {% block content%}
-<div class="flex flex-col justify-center ">
+<div class="w-full flex flex-col justify-center ">
     <div id="project " 
         class="
         fr
@@ -16,7 +12,7 @@
         gap-4">
         <!-- ArcheryBuddy -->
         <div class="screenshot">
-            <img class="h-[200px] mx-auto" src={{url_for('static', filename='img/portfolio/ArcheryBuddy.png')}} alt="application ArcheryBuddy">
+            <img class="h-[200px] w-auto mx-auto" src={{url_for('static', filename='img/portfolio/ArcheryBuddy.png')}} alt="application ArcheryBuddy">
         </div>
         <div class="description">
             <h3>Archery Buddy</h3>    
@@ -31,7 +27,7 @@
             <p>technologies utilisées: Django, HTML, CSS, JS</p>
         </div>
         <div class="links">
-            <div>
+            <div class="hidden">
                 <a class="underline" href="http://www.archerybuddy.tech">lien en production</a>
             </div>
             <div>
@@ -41,7 +37,7 @@
         </div>
         <!-- GrandPy Bot -->
         <div class="screenshot">
-            <img class="h-[200px] mx-auto" src={{url_for('static', filename='img/portfolio/grandpy_bot.png')}} alt="application GrandPy Bot">
+            <img class="h-[200px] w-auto mx-auto" src={{url_for('static', filename='img/portfolio/grandpy_bot.png')}} alt="application GrandPy Bot">
         </div>
         <div class="description">
             <h3>GrandPy Bot</h3>    
@@ -65,7 +61,7 @@
         </div>
         <!-- Purbeurre -->
         <div class="screenshot">
-            <img class="h-[200px] mx-auto" src={{url_for('static', filename='img/portfolio/purbeurre.png')}} alt="application Purbeurre Django">
+            <img class="h-[200px] w-auto mx-auto" src={{url_for('static', filename='img/portfolio/purbeurre.png')}} alt="application Purbeurre Django">
         </div>
         <div class="description">
             <h3>Purbeurre</h3>    
@@ -84,7 +80,7 @@
         </div>
         <!-- Purbeurre desktop app with kivy -->
         <div class="screenshot">
-            <img class="h-[200px] mx-auto" src={{url_for('static', filename='img/portfolio/purbeurre-kivy.png')}} alt="application Purbeurre avec Kivy">
+            <img class="h-[200px] w-auto mx-auto" src={{url_for('static', filename='img/portfolio/purbeurre-kivy.png')}} alt="application Purbeurre avec Kivy">
         </div>
         <div class="description">
             <h3>Purbeurre - kivy</h3>    
@@ -100,7 +96,7 @@
         </div>
         <!-- GrandPy Bot -->
         <div class="screenshot">
-            <img class="h-[200px] mx-auto" src={{url_for('static', filename='img/portfolio/MacGyver.png')}} alt="Jeu Mac Gyver">
+            <img class="h-[200px] w-auto mx-auto" src={{url_for('static', filename='img/portfolio/MacGyver.png')}} alt="Jeu Mac Gyver">
         </div>
         <div class="description">
             <h3>Mac Gyver</h3>    
@@ -125,7 +121,7 @@
         hidden">
         <!-- ArcheryBuddy -->
         <div class="screenshot">
-            <img class="h-[200px] mx-auto" src={{url_for('static', filename='img/portfolio/ArcheryBuddy.png')}} alt="application ArcheryBuddy">
+            <img class="h-[200px] w-auto mx-auto" src={{url_for('static', filename='img/portfolio/ArcheryBuddy.png')}} alt="application ArcheryBuddy">
         </div>
         <div class="description">
             <h3>Archery Buddy</h3>    
@@ -140,17 +136,17 @@
             <p>frameworks/languages used: Python, Django, HTML, CSS, JS</p>
         </div>
         <div class="links">
-            <div>
+            <div class="hidden">
                 <a class="underline" href="http://www.archerybuddy.tech">lien en production</a>
             </div>
             <div>
-                <a class="underline" href="https://github.com/remace/OC-P13_Archery_Buddy">lien github</a>
+                <a class="underline" href="https://github.com/remace/OC-P13_Archery_Buddy">github link</a>
             </div>
             </a>
         </div>
         <!-- GrandPy Bot -->
         <div class="screenshot">
-            <img class="h-[200px] mx-auto" src={{url_for('static', filename='img/portfolio/grandpy_bot.png')}} alt="GrandPy Bot application">
+            <img class="h-[200px] w-auto mx-auto" src={{url_for('static', filename='img/portfolio/grandpy_bot.png')}} alt="GrandPy Bot application">
         </div>
         <div class="description">
             <h3>GrandPy Bot</h3>    
@@ -168,13 +164,13 @@
                 <a class="underline" href="https://grandpy-bot-remace.herokuapp.com">lien en production</a>
             </div>
             <div>
-                <a class="underline" href="https://github.com/remace/OC-P7-GrandPy_Bot">lien github</a>
+                <a class="underline" href="https://github.com/remace/OC-P7-GrandPy_Bot">github link</a>
             </div>
             </a>
         </div>
         <!-- Purbeurre -->
         <div class="screenshot">
-            <img class="h-[200px] mx-auto" src={{url_for('static', filename='img/portfolio/purbeurre.png')}} alt=" PurBeurre application">
+            <img class="h-[200px] w-auto mx-auto" src={{url_for('static', filename='img/portfolio/purbeurre.png')}} alt=" PurBeurre application">
         </div>
         <div class="description">
             <h3>Purbeurre</h3>    
@@ -184,7 +180,7 @@
             <p>technologies utilisées: Django, postgresql, bootstrap, HTML, CSS</p>
         </div>
         <div class="links">
-            <div>
+            <div class="hidden">
                 <a class="underline" href="http://164.92.224.144/">production link</p>
             </div>
             <div>
@@ -193,7 +189,7 @@
         </div>
         <!-- Purbeurre desktop app with kivy -->
         <div class="screenshot">
-            <img class="h-[200px] mx-auto" src={{url_for('static', filename='img/portfolio/purbeurre-kivy.png')}} alt="application Purbeurre avec Kivy">
+            <img class="h-[200px] w-auto mx-auto" src={{url_for('static', filename='img/portfolio/purbeurre-kivy.png')}} alt="application Purbeurre avec Kivy">
         </div>
         <div class="description">
             <h3>Purbeurre - kivy</h3>    
@@ -208,7 +204,7 @@
         </div>
         <!-- Mac Gyver -->
         <div class="screenshot">
-            <img class="h-[200px] mx-auto" src={{url_for('static', filename='img/portfolio/MacGyver.png')}} alt="MacGyver Game">
+            <img class="h-[200px] w-auto mx-auto" src={{url_for('static', filename='img/portfolio/MacGyver.png')}} alt="MacGyver Game">
         </div>
         <div class="description">
             <h3>Mac Gyver</h3>    

@@ -1,15 +1,11 @@
 {% extends "base.html" %}
 
-{% block head %}
-    {{ super() }}
-{% endblock head %}
-
 {% block title%} index {% endblock title%}
 
 {% block content%}
 <div id="homepage"
     class="flex-cols
-        p-0">
+        p-0 w-full">
     <div id="presentation" class=" h-min w-full">
         <div id="hero">
             <h2 class="text-2xl">Qui suis-je?</h2>
@@ -22,7 +18,7 @@
                 <p class="text-white">photo à venir</p>
             </div>
         </div>
-        <div id="hobbies">
+         <div id="hobbies">
             <h3 class="text-xl">Mes hobbies</h3>
             <div>
                 tir à l'arc
