@@ -1,1 +1,2 @@
-this should be my website, presenting myself and my projects.
+# portfolio
+this should be my temporary website, presenting me, my resume, my portfolio and my projects.
