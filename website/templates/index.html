@@ -1,69 +1,87 @@
 {% extends "base.html" %} {% block title%} index {% endblock title%} {% block
 content%}
-<div id="homepage" class="flex-cols p-0 w-full">
+<div id="homepage" class="flex-cols p-0 w-full px-[10px] py-8">
   <div id="presentation" class="h-min w-full">
     <div id="hero">
-      <h2 class="text-2xl vw-100">Qui suis-je?</h2>
-      <div
-        id="photo-container"
-        class="w-[200px] h-[200px] bg-indigo-500 flex flex-cols items-end justify-center"
-      >
-        <!--<p class="text-white">photo à venir</p>-->
-        <img src="{{ url_for('static',filename='img/photo/photo_cv.jpg') }}" />
-      </div>
-      <div>
-        comme vu dans le titre de la page, je m'appelle Rémi, j'ai 32 ans, je
-        suis développeur junior, curieux et réfléchi, mais toujours dans la
-        bonne humeur!
+      <h2 class="text-2xl vw-100 pb-16">Qui suis-je?</h2>
+      <div class="flex flex-row gap-4 ">
+        <div
+            id="photo-container"
+            class="w-[160px] h-[100px] flex flex-cols items-center justify-center shrink-0"
+        >
+            <img class="shrink-0" src="{{ url_for('static',filename='img/photo/photo_cv.jpg') }}" />
+        </div>
+        <div class="self-center">
+            je m'appelle Rémi, j'ai 35 ans, je
+            suis développeur junior, curieux et réfléchi, mais toujours dans la
+            bonne humeur!
+        </div>
       </div>
     </div>
-    <div id="hobbies">
+    <div class="pt-16 pb-8" id="hobbies">
       <h3 class="text-xl">Mes hobbies</h3>
-      <div>tir à l'arc</div>
-      <div>moto</div>
-      <div>technologie</div>
-      <div>musique</div>
+      <ul>
+        <li>tir à l'arc, ping pong, judo, voile</li>
+        <li>moto</li>
+        <li>nouvelles technologies</li>
+        <li>musique</li>
+      </ul>
+      
     </div>
     <div id="technos-bloc">
-      <h3 class="text-xl">Mes technos:</h3>
+      <h3 class="text-xl">Mes technos principales:</h3>
       <div id="technos" class="flex flex-rows items-center justify-around">
-        <img src={{ url_for('static',filename='img/python.png' )}} alt="logo
-        python" width="100px"> <img src={{
-        url_for('static',filename='img/flask.png' )}} alt="logo flask"
-        width="100px"> <img src={{ url_for('static',filename='img/django2.png'
-        )}} alt="logo django" width="100px"> {# <img src={{
-        url_for('static',filename='img/html5.png' )}} alt="logo HTML"
-        width="100px"> <img src={{ url_for('static',filename='img/css3.png' )}}
-        alt="logo CSS" width="100px"> <img src={{
-        url_for('static',filename='img/javascript.png' )}} alt="logo Javascript"
-        width="100px"> #} <img src={{ url_for('static',filename='img/vue.png'
-        )}} alt="logo VueJS" width="100px">
+        <div class="flex flex-col gap-2">
+            <img src={{ url_for('static',filename='img/python.png' )}} alt="logo
+            python" width="100px">
+            <div class="self-center">Python</div>
+        </div>
+        <div class="flex flex-col gap-2">
+            <img src={{url_for('static',filename='img/flask.png' )}} alt="logo flask"
+            width="100px"> 
+            <div class="self-center pt-3">Flask</div>
+        </div>
+        <div class="flex flex-col gap-2">
+            <img src={{ url_for('static',filename='img/django2.png'
+            )}} alt="logo django" width="100px">
+            <div class="self-center">Django</div>
+        </div>
+        <div class="flex flex-col gap-2">
+            <img src={{ url_for('static',filename='img/vue.png'
+            )}} alt="logo " width="100px">
+            <div class="self-center">Vue</div>
+        </div>
+        
+        
       </div>
     </div>
   </div>
 
-  <div id="contact" class="h-min">
+  <div id="contact" class="h-min mt-8">
     <h2 class="text-2xl">Me contacter</h2>
-    <div class="flex-cols space-y-2">
-      <h3 class="text-xl">Mes Coordonnées</h3>
-      <div class="flex-cols space-y-2">
-        <p>adresse: 9 rue de Laubre 07400 Meysse<br /></p>
-        <p>
-          mail: <a href="mailto:tauvel.remi@gmail.com">tauvel.remi@gmail.com</a
-          ><br />
-        </p>
-        <p>telephone: <a href="tel:+33625908124">06.25.90.81.24</a></p>
-      </div>
-    </div>
-    <div class="flex items-center mt-12 py-4 h-min">
-      <a
-        id="mailme-button"
-        role="link"
-        title="fonctionnalité en cours de développement"
-        class="px-8 py-4 self-center mx-auto rounded-full text-xl text-white bg-indigo-500 hover:bg-white hover:ring-4 hover:ring-indigo-500 hover:text-indigo-500"
-        href={{ url_for('mail')}}
-        >M'envoyer un message</a
-      >
+    <div class="flex flex-row flex-wrap justify-around mt-8">
+        <div class="flex-cols space-y-2">
+        <h3 class="text-xl">Mes Coordonnées</h3>
+        <div class="flex-cols space-y-2">
+            <p>adresse: 9 rue de Laubre 07400 Meysse<br /></p>
+            <p>
+            mail: <a href="mailto:tauvel.remi@gmail.com">tauvel.remi@gmail.com</a
+            ><br />
+            </p>
+            <p>telephone: <a href="tel:+33625908124">06.25.90.81.24</a></p>
+        </div>
+        </div>
+        <div class="flex items-center mt-12 py-4 h-min">
+        <a
+            id="mailme-button"
+            aria-disabled="true"
+            role="link"
+            title="fonctionnalité en cours de développement"
+            class="px-8 py-4 self-center mx-auto rounded-full text-xl text-white bg-indigo-500 hover:bg-white hover:ring-4 hover:ring-indigo-500 hover:text-indigo-500"
+            href={{ url_for('mail')}}
+            >M'envoyer un message</a
+        >
+        </div>
     </div>
   </div>
 </div>

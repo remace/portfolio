@@ -56,17 +56,19 @@ def mail():
     """
     if request.method == "GET":
         flash(
-            "la fonctionnalité n'est pas encore implémentée veuillez m'écrire via mon adresse mail que vous trouverez en bas sur cette page",
+            "la fonctionnalité n'est pas encore implémentée veuillez m'écrire via l'adresse mail que vous trouverez en bas sur cette page",
             "error",
         )
         return redirect(url_for("index"), code=301)
         # return render_template('mailForm.html')
     elif request.method == "POST":
         # TODO send the mail to me and a copy to the sender
+        print("ici ça flash")
         flash(
-            "la fonctionnalité n'est pas encore implémentée veuillez m'écrire via mon adresse mail que vous trouverez en bas sur cette page",
+            "la fonctionnalité n'est pas encore implémentée veuillez m'écrire via l'adresse mail que vous trouverez en bas sur cette page",
             "error",
         )
+        print("fin du flash")
         return redirect(url_for("index"), code=301)
     else:
         flash(
